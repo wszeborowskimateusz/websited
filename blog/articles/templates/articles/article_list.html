@@ -1,0 +1,22 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<main>
+    <header>
+        <h1>Artykuły</h1>
+    </header>
+    <div class="articles">
+        {% for article in articles %}
+        <article class="article">
+            <header>
+                <a href="{% url 'articles:detail' slug=article.slug %}">
+                    <h2>{{article.title}}</h2>
+                </a>
+            </header>
+            <div class="mb-3">{{article.timestamp}}</div>
+            <p class="lead">{{article.snippet}}</p>
+        </article>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}

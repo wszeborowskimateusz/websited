@@ -1,0 +1,16 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<main>
+    <header class="justify-content-center">
+        <h1 >Zarejestruj się</h1>
+    </header>
+    <div class="">
+        <form class="site-form" action="{% url 'accounts:register' %}" method="POST">
+            {% csrf_token %}
+            {{ register_form }}
+            <input type="submit" value="Zarejestruj się">
+        </form>
+    </div>
+</main>
+{% endblock %}
