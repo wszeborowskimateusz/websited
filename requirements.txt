@@ -69,5 +69,5 @@ vector==0.0.0
 virtualenv==16.0.0
 w3lib==1.19.0
 webapp2==2.5.2
-Werkzeug==0.14.1
+Werkzeug==0.15.3
 zope.interface==4.5.0
